@@ -7,10 +7,10 @@ function Header() {
   return (
     <div className='navContainer'>
       <img src={Logo} alt="Logo Kasa orange" />
-      <div className='navBar'>
+      <nav className='navBar'>
       <Link to="/">Accueil</Link>
       <Link to="/a-propos">A propos</Link>
-      </div>
+      </nav>
     </div>
   );
 }

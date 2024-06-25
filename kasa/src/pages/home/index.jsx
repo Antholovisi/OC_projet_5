@@ -1,10 +1,16 @@
+import React from 'react';
+import Banner from '../../components/banner';
+import Main from '../../components/main';
+import ApartementGrid from '../../components/Apartement grid';
+
 
 
 function Home() {
     return (
-        <div>
-            <h1>Home</h1>
-        </div>
+        <Main>
+            <Banner />
+            <ApartementGrid />
+        </Main>
     );
 }
 

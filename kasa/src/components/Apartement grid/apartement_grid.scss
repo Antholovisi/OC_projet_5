@@ -1,0 +1,11 @@
+.apartement_grid {
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    padding: 25px 0;
+    margin-bottom: 30px;
+}
