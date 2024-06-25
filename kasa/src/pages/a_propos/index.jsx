@@ -4,7 +4,7 @@ import Main from '../../components/main';
 
 
 
-function A_propos() {
+function APropos() {
     return (
         <Main>
             <Banner />
@@ -13,4 +13,4 @@ function A_propos() {
     );
 }
 
-export default A_propos
+export default APropos

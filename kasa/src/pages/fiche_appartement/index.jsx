@@ -1,7 +1,8 @@
+import React from 'react';
 
 
 
-function Fiche_appartement() {
+function FicheAppartement() {
     return (
         <div>
             <h1>Fiche appartement</h1>
@@ -9,4 +10,4 @@ function Fiche_appartement() {
     );
 }
 
-export default Fiche_appartement
+export default FicheAppartement
