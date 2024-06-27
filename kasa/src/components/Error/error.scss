@@ -3,17 +3,50 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    & p {
+    gap: 140px;
+
+    .pic-404 {
+        font-size: 288px;
+        font-weight: 700;
+        color: #ff6060;
+        margin: 0;
+    }
+
+    & .text-404 {
         color: #ff6060;
         font-weight: 500;
         font-size: 36px;
-        margin-top: 180px;
-        margin-bottom: 100px;
+        text-align: center;
+        word-break: break-word;
     }
     .link-404 {
         text-decoration: underline;
         font-size: 18px;
-        font-weight: 500;  
+        font-weight: 500;
+        margin-bottom: 140px;  
     }
+
+    @media (max-width: 768px) {
+        .pic-404 {
+            font-size: clamp(96px, 10vw + 60px, 288px);
+        }
+        &.link-404 {
+            font-size: clamp(14px, 1.5vw, 18px);
+        }
+    @media (max-width: 1024px) {
+        gap: 113px;
+
+        & .text-404 {
+            font-size: clamp(18px, 4vw, 36px);
+        }
+        .second-line {
+            display: block;
+        }
+
+        .link-404 {
+            margin-bottom: 113px;
+        }
+    }
+}
+
 }

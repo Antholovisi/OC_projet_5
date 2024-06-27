@@ -14,10 +14,11 @@ root.render(
 
 // CORRECTIONS A FAIRE : 
 
+// -Revoir le soulignement pour la navbar dans le HEADER (au hover ?, au clic ? transi de l'apparition du soulignement ?)
 
-// -Revoir le soulignement pour la navbar (au hover, au clic ? transi de l'apparition du soulignement ?)
-// -Revoir le footer pour le responsive (resize de la font et le texte passe sur deux lignes, attention, le logo noir n'est pas a resize)
-// -Comment faire les ombres projetées sur le texte en lui même dans le BANNER
+// -Comment faire les ombres projetées sur le texte en lui même dans le BANNER ?
+
+
 
 // A FAIRE DANS LE FUTUR :
 
