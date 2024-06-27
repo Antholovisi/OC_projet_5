@@ -6,7 +6,7 @@ function Banner () {
         <div className="banner">
             <img src={Logo} alt="paysage banner" />
             <div className="banner-text">
-                Chez vous, et partout ailleurs
+            Chez vous,<span className="second-line"> et partout ailleurs</span>
             </div>
         </div>
     );

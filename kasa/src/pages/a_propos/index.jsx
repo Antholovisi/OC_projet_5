@@ -4,7 +4,7 @@ import Main from '../../components/main';
 
 
 
-function APropos() {
+function About() {
     return (
         <Main>
             <Banner />
@@ -13,4 +13,4 @@ function APropos() {
     );
 }
 
-export default APropos
+export default About

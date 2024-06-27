@@ -9,7 +9,7 @@ function Header() {
       <img src={Logo} alt="Logo Kasa orange" />
       <nav className='navBar'>
       <Link to="/">Accueil</Link>
-      <Link to="/a-propos">A propos</Link>
+      <Link to="/about">A propos</Link>
       </nav>
     </div>
   );
