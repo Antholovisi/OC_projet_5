@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../../components/banner';
 import Main from '../../components/main';
-import ApartementGrid from '../../components/Apartement grid';
+import ApartementGrid from '../../components/ApartementGrid';
 
 
 

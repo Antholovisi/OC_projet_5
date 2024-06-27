@@ -4,7 +4,7 @@ import Header from './components/Header/index.jsx';
 import Footer from './components/Footer/index.jsx';
 import Home from './pages/home';
 import About from './pages/a_propos';
-import FicheAppartement from './pages/fiche_appartement';
+import FicheAppartement from './pages/apartement-page';
 import Error from './pages/404';
 
 
