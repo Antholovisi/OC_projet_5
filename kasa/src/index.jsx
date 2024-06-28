@@ -21,8 +21,8 @@ root.render(
 // A FAIRE DANS LE FUTUR :
 
 // -Faire toute la page ABOUT 
-// -Faire tout le responsive pour FICHE APPARTEMENT et ABOUT
-
+// -Faire tout le responsive pour ABOUT
+// -Une fois cette étape fini et propre c'est parti pour tout brancher et tater du JS
 
 // AMELIORATION SI ENCORE DU TEMPS :
 // -Faire des variables et des mixin en scss peut etre pour :
