@@ -7,7 +7,7 @@ function Error () {
         <div className='error'>
             <p className='pic-404'>404</p>
             <div className='text-404'>
-                Oups! La page que
+                <span>Oups! La page que </span>
                 <span className='second-line'>vous demandez n'existe pas.</span>
                 </div>
             <Link to="/" className='link-404'>Retournez sur la page d’accueil</Link>

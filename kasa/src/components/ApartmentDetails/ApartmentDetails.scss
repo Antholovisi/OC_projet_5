@@ -1,4 +1,8 @@
 .apartment-description {
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
     .title {
         background-color: #ff6060;
         color: white;  
@@ -27,3 +31,4 @@
         margin: 0;
     }
 }
+

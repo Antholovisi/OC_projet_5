@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    margin: 50px 50px 50px 50px;
     .navBar {
         display: flex;
         justify-content: space-between;
@@ -22,7 +22,7 @@
     }
 
     @media (max-width: 768px) {
-        padding: 20px;
+        margin: 20px 20px 20px 20px;
         img {
             width: 145px;
             height: auto;
@@ -30,6 +30,7 @@
         .navBar {
             font-size: clamp(12px, 2vw, 24px);
             gap: 20px;
+            text-transform: uppercase;
         }
     }
 }

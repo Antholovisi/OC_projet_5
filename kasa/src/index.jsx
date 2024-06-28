@@ -15,18 +15,14 @@ root.render(
 // CORRECTIONS A FAIRE : 
 
 // -Revoir le soulignement pour la navbar dans le HEADER (au hover ?, au clic ? transi de l'apparition du soulignement ?)
-
 // -Comment faire les ombres projetées sur le texte en lui même dans le BANNER ?
-
 
 
 // A FAIRE DANS LE FUTUR :
 
-// -Faire tout le responsive pour la 404
-
 // -Faire toute la page ABOUT 
-// -Faire toute la page FICHE APPARTEMENT
 // -Faire tout le responsive pour FICHE APPARTEMENT et ABOUT
+
 
 // AMELIORATION SI ENCORE DU TEMPS :
 // -Faire des variables et des mixin en scss peut etre pour :
