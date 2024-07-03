@@ -12,10 +12,11 @@ root.render(
 
 // A finir :
 
-// 1/ Revoir le dégradé linéaire pour les CARDS
-// 2/ Revoir le soulignement pour la NAVBAR
-// 3/ Revoir les espacements pour les equipements dans la fiche appartement
-// 4/ faire le collapse pour equipement et description
+// 1/ Revoir le dégradé linéaire pour les CARDS important ou pas ?
+// 2/ Faire en sorte que lorsque l'on clique sur le lien en bas de la page 404 nous ramène en haut de la page d'acceuil
+// 3/ Voir comment faire les animations pour le chevron dans les deux sens pour les bandeaux déroulants
+// 4/ Revoir le fonctionnement du carousel (probleme de border radius lors du changement d'image, probleme de le gestion de l'infinite loop)
+// 5/ Voir comment changer la height pour le banner de la page a propos
 
 // A FAIRE DANS LE FUTUR :
 

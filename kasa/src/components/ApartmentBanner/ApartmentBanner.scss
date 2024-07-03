@@ -1,5 +1,6 @@
 .apartment-banner {
   margin-bottom: 25px;
+  position: relative;
 
   img {
     width: 100%;
@@ -8,17 +9,46 @@
     object-fit: cover;
   }
 
-  &.About-banner img {
-    height: 223px;
+  &.about-banner {
+    img {
+      height: 415px; // Hauteur spécifique pour la classe about-banner
+    }
   }
 
   @media screen and (max-width: 768px) {
     img {
-      height: clamp(225px, 50vw, 415px);
+      height: 255px; // Réduction de la hauteur pour les écrans plus petits
     }
 
-    &.About-banner img {
-      height: clamp(200px, 40vw, 223px);
+    &.about-banner {
+      img {
+        height: 255px; // Hauteur spécifique pour la classe about-banner dans les médias plus petits
+      }
+    }
+  }
+
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+
+    &.custom-prev-arrow {
+      left: 10px;
+    }
+
+    &.custom-next-arrow {
+      right: 10px;
+    }
+
+    i {
+      color: #ffffff;
+      font-size: clamp(25px, 8vw, 96px);
     }
   }
 }

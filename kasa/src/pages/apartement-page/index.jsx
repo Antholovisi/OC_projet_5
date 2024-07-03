@@ -3,12 +3,13 @@ import Main from '../../components/main';
 import ApartmentBanner from '../../components/ApartmentBanner';
 import ApartmentInfos from '../../components/ApartmentInfos';
 import ApartmentDetails from '../../components/ApartmentDetails';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function FicheAppartement() {
   const { id } = useParams();
   const [apartmentData, setApartmentData] = useState(null);
   const [fetchComplete, setFetchComplete] = useState(false);
+  const navigate = useNavigate(); // Utilisation de useNavigate pour la redirection
 
   useEffect(() => {
     let isMounted = true;
@@ -22,11 +23,16 @@ function FicheAppartement() {
         const data = await response.json();
         const apartment = data.find((apartment) => apartment.id === id);
         if (isMounted) {
-          setApartmentData(apartment);
+          if (apartment) {
+            setApartmentData(apartment);
+          } else {
+            navigate('/404');
+          }
           setFetchComplete(true);
         }
       } catch (error) {
         console.error('Error fetching data:', error);
+        navigate('/404');
       }
     };
 
@@ -37,7 +43,7 @@ function FicheAppartement() {
     return () => {
       isMounted = false;
     };
-  }, [id, fetchComplete]);
+  }, [id, fetchComplete, navigate]);
 
   useEffect(() => {
     if (apartmentData) {
@@ -51,24 +57,25 @@ function FicheAppartement() {
 
   return (
     <Main>
-      <ApartmentBanner imageUrl={apartmentData.cover} />
+      <ApartmentBanner
+        images={apartmentData.pictures}
+        additionalClass="about-banner"
+      />
       <ApartmentInfos data={apartmentData} />
-      {apartmentData && (
-        <div className="apartment-details__container">
-          <ApartmentDetails
-            data={apartmentData}
-            title="Description"
-            content={apartmentData.description}
-          />
-          <ApartmentDetails
-            data={apartmentData}
-            title="Equipements"
-            content={apartmentData.equipments.map((equipment) => (
-              <li key={equipment}>{equipment}</li>
-            ))}
-          />
-        </div>
-      )}
+      <div className="apartment-details__container">
+        <ApartmentDetails
+          data={apartmentData}
+          title="Description"
+          content={apartmentData.description}
+        />
+        <ApartmentDetails
+          data={apartmentData}
+          title="Equipements"
+          content={apartmentData.equipments.map((equipment) => (
+            <li key={equipment}>{equipment}</li>
+          ))}
+        />
+      </div>
     </Main>
   );
 }
