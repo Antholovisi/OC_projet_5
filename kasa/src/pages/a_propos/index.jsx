@@ -1,16 +1,16 @@
 import React from 'react';
-import Banner from '../../components/banner';
+import ApartmentBanner from '../../components/ApartmentBanner';
 import Main from '../../components/main';
 import ApartmentDetails from '../../components/ApartmentDetails';
 
 function About() {
   return (
     <Main>
-      <Banner />
-      <ApartmentDetails />
-      <ApartmentDetails />
-      <ApartmentDetails />
-      <ApartmentDetails />
+      <ApartmentBanner additionalClass="About-banner" />
+      <ApartmentDetails additionalClass="About-details" />
+      <ApartmentDetails additionalClass="About-details" />
+      <ApartmentDetails additionalClass="About-details" />
+      <ApartmentDetails additionalClass="About-details" />
     </Main>
   );
 }

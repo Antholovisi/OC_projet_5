@@ -1,13 +1,12 @@
-import './ApartmentBanner.scss'
+import React from 'react';
+import './ApartmentBanner.scss';
 
-function ApartmentBanner() {
-    return (
-        
-            <div className="apartment-banner">
-            <img src="https://picsum.photos/800/400" alt="pic test" />
-            </div>
-
-    )
+function ApartmentBanner({ additionalClass, imageUrl }) {
+  return (
+    <div className={`apartment-banner ${additionalClass}`}>
+      <img src={imageUrl} alt="intérieur de l'appartement" />
+    </div>
+  );
 }
 
-export default ApartmentBanner
+export default ApartmentBanner;

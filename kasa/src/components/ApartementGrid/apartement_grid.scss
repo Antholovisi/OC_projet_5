@@ -1,19 +1,23 @@
 .apartement_grid {
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 50px;
-    flex-wrap: wrap;
-    padding: 50px 0;
-    margin-bottom: 30px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 50px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 880px) {
+    background-color: white;
+  }
 }
 
-@media (max-width: 768px) {
-    .apartement_grid {
-        background-color: white;
-        margin-bottom: 0;
-        gap : 20px;
-    }
+@media screen and (max-width: 930px) {
+  .apartement_grid {
+    margin-bottom: 0;
+    padding: 22px 0;
+    justify-content: center;
+    row-gap: 22px;
+  }
 }

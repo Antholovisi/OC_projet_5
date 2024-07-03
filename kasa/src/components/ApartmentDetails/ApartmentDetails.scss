@@ -1,8 +1,19 @@
 .apartment-description {
   margin-bottom: 1rem;
+
+  &.About-details {
+    margin: 0 150px 20px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      margin-bottom: 19px;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
+
   .title {
     background-color: #ff6060;
     color: white;
@@ -27,7 +38,31 @@
     z-index: -1;
     top: -0.3rem;
   }
+
   p {
     margin: 0;
+  }
+}
+
+.apartment-details__container {
+  display: flex;
+  gap: 4.8rem;
+  margin-bottom: 50px;
+
+  li {
+    list-style: none;
+  }
+
+  .apartment-description {
+    flex-basis: 50%;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.6rem;
+
+    .apartment-description {
+      flex-basis: 100%;
+    }
   }
 }
