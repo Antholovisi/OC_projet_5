@@ -1,12 +1,14 @@
-.main {
-    padding-inline: 50px;
-    a {
-        text-decoration: none;
-    }
-}
+@import '../variables/colors.scss';
+@import '../variables/mixins.scss';
 
-@media (max-width: 768px) {
-    .main {
-        padding-inline: 20px;
-    }
+.main {
+  padding-inline: 50px;
+
+  a {
+    text-decoration: none;
+  }
+
+  @include media('(max-width: 768px)') {
+    padding-inline: 20px;
+  }
 }

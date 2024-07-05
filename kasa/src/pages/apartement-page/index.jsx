@@ -9,7 +9,7 @@ function FicheAppartement() {
   const { id } = useParams();
   const [apartmentData, setApartmentData] = useState(null);
   const [fetchComplete, setFetchComplete] = useState(false);
-  const navigate = useNavigate(); // Utilisation de useNavigate pour la redirection
+  const navigate = useNavigate();
 
   useEffect(() => {
     let isMounted = true;
@@ -59,7 +59,7 @@ function FicheAppartement() {
     <Main>
       <ApartmentBanner
         images={apartmentData.pictures}
-        additionalClass="about-banner"
+        additionalClass="apartment-banner"
       />
       <ApartmentInfos data={apartmentData} />
       <div className="apartment-details__container">

@@ -1,17 +1,15 @@
+@import '../variables/colors.scss';
+@import '../variables/mixins.scss';
+
 .navContainer {
+  @include flex-center(row, space-between, center);
   width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 50px 50px 50px 50px;
+  margin: 50px;
 
   .navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-center(row, space-between, center);
+    @include font-style(24px, 500);
     gap: 57px;
-    font-weight: 500;
-    font-size: 24px;
 
     a {
       color: black;
@@ -23,8 +21,8 @@
     }
   }
 
-  @media (max-width: 768px) {
-    margin: 20px 20px 20px 20px;
+  @include media('(max-width: 768px)') {
+    margin: 20px;
 
     img {
       width: 145px;

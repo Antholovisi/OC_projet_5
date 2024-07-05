@@ -1,28 +1,28 @@
+@import '../variables/colors.scss';
+@import '../variables/mixins.scss';
+
 .apartment-banner {
   margin-bottom: 25px;
   position: relative;
 
   img {
-    width: 100%;
-    height: 415px;
-    border-radius: 25px;
-    object-fit: cover;
+    @include responsive-img(415px);
   }
 
   &.about-banner {
     img {
-      height: 415px; // Hauteur spécifique pour la classe about-banner
+      height: 223px;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @include media('(max-width: 768px)') {
     img {
-      height: 255px; // Réduction de la hauteur pour les écrans plus petits
+      height: 255px;
     }
 
     &.about-banner {
       img {
-        height: 255px; // Hauteur spécifique pour la classe about-banner dans les médias plus petits
+        height: 111px;
       }
     }
   }
@@ -32,9 +32,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center(row, center, center);
     cursor: pointer;
     z-index: 10;
 
@@ -47,7 +45,7 @@
     }
 
     i {
-      color: #ffffff;
+      color: $white-color;
       font-size: clamp(25px, 8vw, 96px);
     }
   }

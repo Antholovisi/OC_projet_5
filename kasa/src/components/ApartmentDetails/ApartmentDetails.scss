@@ -1,27 +1,28 @@
+@import '../variables/colors.scss';
+@import '../variables/mixins.scss';
+
 .apartment-description {
   margin-bottom: 27px;
 
   &.About-details {
     margin: 0 150px 20px;
 
-    @media screen and (max-width: 768px) {
+    @include media('(max-width: 768px)') {
       margin: 0;
       margin-bottom: 19px;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @include media('(max-width: 768px)') {
     flex-direction: column;
   }
 
   .title {
-    background-color: #ff6060;
-    color: white;
+    background-color: $primary-color;
+    color: $white-color;
     padding: 10px;
     border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-center(row, space-between, center);
 
     i {
       cursor: pointer;
@@ -34,8 +35,8 @@
   }
 
   .description-content {
-    background-color: #f6f6f6;
-    color: black;
+    background-color: $secondary-color;
+    color: $black-color;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -67,7 +68,7 @@
     flex-basis: 50%;
   }
 
-  @media screen and (max-width: 768px) {
+  @include media('(max-width: 768px)') {
     flex-direction: column;
     gap: 0;
 
