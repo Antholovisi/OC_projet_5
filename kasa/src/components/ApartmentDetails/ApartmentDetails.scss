@@ -27,27 +27,31 @@
     i {
       cursor: pointer;
       font-size: 24px;
+      transition: transform 0.3s ease-in-out;
       &.rotate {
         transform: rotate(180deg);
-        transition: transform 0.3s ease-in-out;
       }
     }
   }
 
   .description-content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    padding: 0 20px;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
     background-color: $secondary-color;
     color: $black-color;
-    padding: 20px;
     border-radius: 10px;
     position: relative;
     z-index: -1;
     top: -0.3rem;
-    transition: max-height 0.8s ease-in-out;
-    &.hidden {
-      transform: translateY(-100%);
-    }
-    &.visible {
-      transform: translateY(0);
+
+    &.open {
+      max-height: 600px;
+      opacity: 1;
+      padding: 20px;
     }
   }
 

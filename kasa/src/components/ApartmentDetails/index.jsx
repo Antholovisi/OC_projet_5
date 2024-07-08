@@ -16,7 +16,9 @@ function ApartmentDetails({ additionalClass, title, content }) {
           className={`fa-solid fa-chevron-down ${isOpen ? 'rotate' : ''}`}
           onClick={toggleDescription}></i>
       </p>
-      {isOpen && <p className="description-content">{content}</p>}
+      <div className={`description-content ${isOpen ? 'open' : 'closed'}`}>
+        <p>{content}</p>
+      </div>
     </div>
   );
 }

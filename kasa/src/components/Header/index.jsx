@@ -6,12 +6,14 @@ import './header.scss';
 function Header() {
   return (
     <div className="navContainer">
-      <img src={Logo} alt="Logo Kasa orange" />
+      <NavLink to="/">
+        <img src={Logo} alt="Logo Kasa orange" />
+      </NavLink>
       <nav className="navBar">
-        <NavLink exact to="/" activeClassName="active">
+        <NavLink to="/" activeclassname="active">
           Accueil
         </NavLink>
-        <NavLink to="/about" activeClassName="active">
+        <NavLink to="/about" activeclassname="active">
           A propos
         </NavLink>
       </nav>

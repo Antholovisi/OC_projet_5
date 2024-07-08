@@ -1,26 +1,22 @@
+// About.jsx
+
 import React from 'react';
-import ApartmentBanner from '../../components/ApartmentBanner';
+import Banner from '../../components/banner';
 import Main from '../../components/main';
 import ApartmentDetails from '../../components/ApartmentDetails';
+import aboutData from '../../data/aboutData';
 import imgBanner2 from '../../Assets/img_banner2.png';
 
 function About() {
-  const contentFiabilité =
-    'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes.';
-  const contentRespect =
-    'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.';
-  const contentSecurite =
-    "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de securité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la securité domestique pour nos clients.";
-
-  const images = [imgBanner2];
+  const { contentFiabilite, contentRespect, contentSecurite } = aboutData;
 
   return (
     <Main>
-      <ApartmentBanner images={images} additionalClass="about-banner" />
+      <Banner showText={false} imageUrl={imgBanner2} />{' '}
       <ApartmentDetails
         additionalClass="About-details"
         title="Fiabilité"
-        content={contentFiabilité}
+        content={contentFiabilite}
       />
       <ApartmentDetails
         additionalClass="About-details"

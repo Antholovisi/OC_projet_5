@@ -1,52 +1,83 @@
 @import '../variables/colors.scss';
 @import '../variables/mixins.scss';
 
-.apartment-banner {
-  margin-bottom: 25px;
+.carousel-container {
   position: relative;
+  overflow: hidden;
+  margin-bottom: 25px;
 
-  img {
-    @include responsive-img(415px);
-  }
+  .carousel {
+    position: relative;
+    overflow: hidden;
 
-  &.about-banner {
-    img {
-      height: 223px;
-    }
-  }
-
-  @include media('(max-width: 768px)') {
-    img {
-      height: 255px;
+    .carousel-inner {
+      height: 415px;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
     }
 
-    &.about-banner {
+    .slide {
+      width: 100%;
+      flex: 0 0 auto;
+      transition: opacity 0.5s ease-in-out;
+      overflow: hidden;
+      display: flex;
+      border-radius: 25px;
+
       img {
-        height: 111px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0);
+      color: $white-color;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 75px;
+      padding: 10px;
+      transition: background-color 0.3s ease-in-out;
+      border-radius: 0;
+      &.prev {
+        left: 10px;
+      }
+
+      &.next {
+        right: 10px;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
       }
     }
   }
 
-  .custom-prev-arrow,
-  .custom-next-arrow {
+  .counter {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    @include flex-center(row, center, center);
-    cursor: pointer;
-    z-index: 10;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white-color;
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
 
-    &.custom-prev-arrow {
-      left: 10px;
-    }
-
-    &.custom-next-arrow {
-      right: 10px;
-    }
-
-    i {
-      color: $white-color;
-      font-size: clamp(25px, 8vw, 96px);
+  @include media('(max-width: 768px)') {
+    .carousel {
+      .carousel-inner {
+        height: 255px;
+      }
+      .arrow {
+        font-size: 24px;
+      }
     }
   }
 }
