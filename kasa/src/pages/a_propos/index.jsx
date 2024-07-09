@@ -1,5 +1,3 @@
-// About.jsx
-
 import React from 'react';
 import Banner from '../../components/banner';
 import Main from '../../components/main';

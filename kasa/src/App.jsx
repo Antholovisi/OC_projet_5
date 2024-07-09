@@ -7,7 +7,7 @@ import About from './pages/a_propos';
 import FicheAppartement from './pages/apartement-page';
 import Error from './pages/404';
 
-function App() {
+function Routing() {
   return (
     <Router>
       <Header />
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Routing;

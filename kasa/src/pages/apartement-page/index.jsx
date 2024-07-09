@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Main from '../../components/main';
-import ApartmentBanner from '../../components/ApartmentBanner';
+import LogementsCarousel from '../../components/LogementsCarousel';
 import ApartmentInfos from '../../components/ApartmentInfos';
 import ApartmentDetails from '../../components/ApartmentDetails';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -57,7 +57,7 @@ function FicheAppartement() {
 
   return (
     <Main>
-      <ApartmentBanner
+      <LogementsCarousel
         images={apartmentData.pictures}
         additionalClass="apartment-banner"
       />
