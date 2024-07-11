@@ -17,6 +17,11 @@
       height: 415px;
       display: flex;
       position: relative;
+
+      &.single-image {
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     .slide {
@@ -29,6 +34,12 @@
       transition: opacity 0.3s ease-in-out;
       overflow: hidden;
       border-radius: 25px;
+
+      &.single-image {
+        position: relative;
+        opacity: 1;
+        z-index: 1;
+      }
 
       img {
         width: 100%;

@@ -19,8 +19,8 @@ const LogementsCarousel = ({ images }) => {
     return (
       <div className="carousel-container">
         <div className="carousel">
-          <div className="carousel-inner">
-            <div className="slide">
+          <div className="carousel-inner single-image">
+            <div className="slide single-image">
               <img src={images[0]} alt={`Slide 1`} loading="lazy" />
             </div>
           </div>
