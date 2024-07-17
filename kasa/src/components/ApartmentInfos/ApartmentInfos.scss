@@ -72,7 +72,6 @@
     }
 
     .apartment-details__badge {
-      margin-left: 10px;
       border-radius: 50%;
       width: 64px;
       height: 64px;
@@ -85,6 +84,9 @@
 
     .apartment-details {
       display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+
       h3 {
         display: flex;
         flex-direction: column;
@@ -98,14 +100,16 @@
 
       @include media('(max-width: 768px)') {
         font-size: clamp(12px, 2vw, 18px) !important;
+
+        margin-bottom: 0;
       }
     }
   }
 
   .apartment-stars {
     display: flex;
-    gap: 5px;
-    font-size: 36px;
+    gap: 10px;
+    font-size: 20px;
     color: #e3e3e3;
 
     .star-on {

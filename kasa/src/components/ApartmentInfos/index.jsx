@@ -35,7 +35,7 @@ function ApartmentInfos(props) {
         <div className="apartment-stars">
           {[...Array(5)].map((_, num) => (
             <span key={num} className={rating > num ? 'star-on' : 'star-off'}>
-              ★
+              <i class="fa-solid fa-star"></i>
             </span>
           ))}
         </div>

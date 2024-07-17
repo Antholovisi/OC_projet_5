@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   padding: 50px;
   margin-bottom: 30px;
-  @include flex-center(row, space-between, stretch);
+  @include flex-center(stretch);
   @media screen and (max-width: 880px) {
     background-color: $white-color;
   }
@@ -20,6 +20,6 @@
     margin-bottom: 0;
     padding: 22px 0;
     justify-content: center;
-    row-gap: 22px;
+    gap: 22px;
   }
 }
