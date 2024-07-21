@@ -5,7 +5,9 @@ import ApartmentDetails from '../../components/ApartmentDetails';
 import aboutData from '../../data/aboutData';
 import imgBanner2 from '../../Assets/img_banner2.png';
 
+// Définition du composant About
 function About() {
+  // Extraction des contenus de la section "À propos" depuis les données importées
   const { contentFiabilite, contentRespect, contentSecurite } = aboutData;
 
   return (

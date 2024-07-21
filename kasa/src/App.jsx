@@ -7,6 +7,7 @@ import About from './pages/a_propos';
 import FicheAppartement from './pages/apartement-page';
 import Error from './pages/404';
 
+// Gestion de la logique du routing et des erreurs
 function Routing() {
   return (
     <Router>

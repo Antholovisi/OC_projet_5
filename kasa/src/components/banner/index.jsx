@@ -1,7 +1,9 @@
 import React from 'react';
 import './banner.scss';
 
+// Définition du composant Banner
 function Banner({ showText, imageUrl }) {
+  // Rendu du composant Banner
   return (
     <div className="banner">
       <img src={imageUrl} alt="paysage banner" />

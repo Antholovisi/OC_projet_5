@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../../Assets/logo_kasa_orange.png';
 import './header.scss';
 
+// Définition du composant Header
 function Header() {
+  // Rendu du composant Header
   return (
     <div className="navContainer">
       <NavLink to="/">
@@ -21,4 +23,5 @@ function Header() {
   );
 }
 
+// Exportation du composant Header
 export default Header;

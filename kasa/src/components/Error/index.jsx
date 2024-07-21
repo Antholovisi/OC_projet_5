@@ -2,7 +2,9 @@ import React from 'react';
 import './error.scss';
 import { Link } from 'react-router-dom';
 
+// Définition du composant Error
 function Error() {
+  // Rendu du composant Error
   return (
     <div className="error">
       <p className="pic-404">404</p>
@@ -17,4 +19,5 @@ function Error() {
   );
 }
 
+// Exportation du composant Error
 export default Error;

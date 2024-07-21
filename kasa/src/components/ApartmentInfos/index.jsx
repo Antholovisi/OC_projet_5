@@ -1,10 +1,14 @@
 import './ApartmentInfos.scss';
 
+// Définition du composant ApartmentInfos
 function ApartmentInfos(props) {
+  // Déstructuration des données passées en prop pour obtenir les informations nécessaires
   const { title, location, tags, host, rating } = props.data;
 
+  // Séparation du nom complet de l'hôte en prénom et nom de famille
   const [firstName, lastName] = host.name.split(' ');
 
+  // Rendu du composant
   return (
     <div className="apartment-header">
       <div className="apartment-info">
@@ -44,4 +48,5 @@ function ApartmentInfos(props) {
   );
 }
 
+// Exportation du composant ApartmentInfos
 export default ApartmentInfos;
