@@ -15,9 +15,7 @@ const LogementsCarousel = ({ images }) => {
 
   // Fonction pour passer à la diapositive précédente
   const prevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slidesCount - 1 : prevSlide - 1
-    );
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + slidesCount) % slidesCount);
     // Décrémente l'index de la diapositive actuelle, et va à la fin lorsque le début est atteint
   };
 
