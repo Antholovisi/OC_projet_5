@@ -1,17 +1,21 @@
 @import '../variables/colors.scss';
 @import '../variables/mixins.scss';
 
+.About-details {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+
+  @include media('(max-width: 768px)') {
+    margin: 0;
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+
 .apartment-description {
   margin-bottom: 27px;
-
-  &.About-details {
-    margin: 0 150px 20px;
-
-    @include media('(max-width: 768px)') {
-      margin: 0;
-      margin-bottom: 19px;
-    }
-  }
 
   @include media('(max-width: 768px)') {
     flex-direction: column;

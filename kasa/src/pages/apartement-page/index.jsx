@@ -68,10 +68,7 @@ function FicheAppartement() {
   // Rendu du composant
   return (
     <Main>
-      <LogementsCarousel
-        images={apartmentData.pictures}
-        additionalClass="apartment-banner"
-      />
+      <LogementsCarousel images={apartmentData.pictures} />
       <ApartmentInfos data={apartmentData} />
       <div className="apartment-details__container">
         <ApartmentDetails

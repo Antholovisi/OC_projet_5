@@ -1,9 +1,10 @@
 import React from 'react';
 import Banner from '../../components/banner';
 import Main from '../../components/main';
-import ApartmentDetails from '../../components/ApartmentDetails';
+import '../../components/ApartmentDetails/ApartmentDetails.scss';
 import aboutData from '../../data/aboutData';
 import imgBanner2 from '../../Assets/img_banner2.png';
+import ApartmentDetails from '../../components/ApartmentDetails';
 
 // Définition du composant About
 function About() {
@@ -13,26 +14,12 @@ function About() {
   return (
     <Main>
       <Banner showText={false} imageUrl={imgBanner2} />{' '}
-      <ApartmentDetails
-        additionalClass="About-details"
-        title="Fiabilité"
-        content={contentFiabilite}
-      />
-      <ApartmentDetails
-        additionalClass="About-details"
-        title="Respect"
-        content={contentRespect}
-      />
-      <ApartmentDetails
-        additionalClass="About-details"
-        title="Service"
-        content={contentRespect}
-      />
-      <ApartmentDetails
-        additionalClass="About-details"
-        title="Sécurité"
-        content={contentSecurite}
-      />
+      <div className="About-details">
+        <ApartmentDetails title="Fiabilité" content={contentFiabilite} />
+        <ApartmentDetails title="Respect" content={contentRespect} />
+        <ApartmentDetails title="Service" content={contentRespect} />
+        <ApartmentDetails title="Sécurité" content={contentSecurite} />
+      </div>
     </Main>
   );
 }
