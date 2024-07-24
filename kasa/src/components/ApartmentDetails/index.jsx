@@ -1,10 +1,11 @@
 import React from 'react';
 import './ApartmentDetails.scss';
+import { useState } from 'react';
 
 // Définition du composant ApartmentDetails
-function ApartmentDetails({ additionalClass, title, content }) {
+function ApartmentDetails({ title, content }) {
   // Déclaration de l'état pour gérer l'ouverture et la fermeture de la description
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Fonction pour basculer l'état d'ouverture/fermeture de la description
   const toggleDescription = () => {
@@ -13,7 +14,7 @@ function ApartmentDetails({ additionalClass, title, content }) {
 
   // Rendu du composant
   return (
-    <div className={`apartment-description ${additionalClass}`}>
+    <div className="apartment-description">
       <p className="title">
         <span>{title}</span>
         <i
