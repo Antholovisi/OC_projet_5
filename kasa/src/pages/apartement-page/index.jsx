@@ -23,7 +23,9 @@ function FicheAppartement() {
     const fetchApartmentData = async () => {
       try {
         // Fetch des données depuis un fichier JSON local
-        const response = await fetch('/logements.json');
+        const response = await fetch(
+          `${process.env.PUBLIC_URL}/logements.json`
+        );
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
