@@ -14,7 +14,7 @@ function ApartementGrid() {
       try {
         // Requête fetch pour obtenir les données des appartements depuis un fichier JSON local
         const response = await fetch(
-          `${process.env.PUBLIC_URL}/logements.json`
+          `${process.env.PUBLIC_URL}/OC_projet_5/logements.json`
         );
 
         if (!response.ok) {
